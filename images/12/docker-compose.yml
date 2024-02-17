@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  server:
+    image: static-server
+    container_name: static-app
+    restart: unless-stopped
+    ports:
+      - 80:80
+
