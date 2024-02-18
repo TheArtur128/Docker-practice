@@ -1,0 +1,16 @@
+version: "3"
+services:
+  server:
+    build: server
+    container_name: inc-server
+    network_mode: host
+    restart: always
+
+  client:
+    build: client
+    container_name: inc-client
+    network_mode: host
+    restart: unless-stopped
+    depends_on:
+      - server
+
