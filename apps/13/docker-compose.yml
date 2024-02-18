@@ -1,0 +1,8 @@
+version: "3"
+services:
+  app:
+    build: .
+    container_name: smile-app
+    volumes:
+      - ./result:/~/output
+
